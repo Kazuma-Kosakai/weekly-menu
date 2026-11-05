@@ -1,6 +1,46 @@
 'use strict';
 // please do not delete the 'use strict' line above
 
+const side = [
+  {
+    name:"冷奴",
+    ingredients:["豆腐"]
+  },
+  {
+    name:"ほうれん草のお浸し",
+    ingredients:["ほうれん草", "かつお節"]    
+  },
+  {
+    name:"ほうれん草の胡麻和え",
+    ingredients:["ほうれん草","ゴマ"]
+  },
+  {
+    name:"ほうれん草のマスタードめんつゆ和え",
+    ingredients:["ほうれん草","マスタード", "めんつゆ"]
+  },
+  {
+    name:"小松菜と油揚げのおひたし",
+    ingredients:["小松菜", "油揚げ"]
+  },
+  {
+    name:"きんぴらごぼう",
+    ingredients:["ごぼう", "ニンジン", "ごま"]
+  },
+  {
+    name:"アボカド長芋マグロのワサビ醤油",
+    ingredients:["アボカド", "長芋", "マグロ", "ワサビ"]
+  },
+  {
+    name:"揚げ出し豆腐",
+    ingredients:["豆腐", "厚揚げ", "片栗粉"]
+  },
+  {
+    name:"ハムもやきゅうりのナムル",
+    ingredients:["きゅうり", "ハム", "もやし"]
+  },
+
+]
+
 const dinner = [
   {
     name:"鮭の塩焼き",
@@ -153,30 +193,6 @@ const dayName = [
   "日曜日"
 ]
 
-// const shoppingList = document.getElementById("shoppingList");
-// const button = document.getElementById("sakusei-button");
-
-// button.addEventListener("click", function() {
-//   const shoppingItem = [];
-//   for (let i = 0; i < days.length; i++) {
-//   const morningIndex = Math.floor(Math.random() * morning.length);
-//   const lunchIndex = Math.floor(Math.random() * lunch.length);
-//   const dinnerIndex = Math.floor(Math.random() * dinner.length);
-
-//   const day = document.getElementById(days[i]);
-//   day.innerText =
-//   `${dayName[i]}：朝 ${morning[morningIndex]} /
-//   昼 ${lunch[lunchIndex]} / 晩 ${dinner[dinnerIndex].name}`;
-
-//   shoppingItem.push(...dinner[dinnerIndex].ingredients)
-// }
-//   shoppingList.innerHTML = "";
-//   shoppingItem.forEach(function(item) {
-//     const li = document.createElement("li");
-//     li.innerText = item;
-//     shoppingList.appendChild(li);
-//   })
-// })
 
 
 const shoppingList = document.getElementById("shoppingList");
@@ -193,6 +209,7 @@ button.addEventListener("click", function() {
     const morningIndex = Math.floor(Math.random() * morning.length);
     const lunchIndex = Math.floor(Math.random() * lunch.length);
     const dinnerIndex = Math.floor(Math.random() * dinner.length);
+    const sideIndex = Math.floor(Math.random() * side.length);
 
     // --------------------
     // 献立を表示
@@ -204,7 +221,8 @@ button.addEventListener("click", function() {
   <span class="day-name">${dayName[i]}</span>
   <span class="menu-item">🌅 ${morning[morningIndex]}</span>
   <span class="menu-item">☀️ ${lunch[lunchIndex].name}</span>
-  <span class="menu-item">🌙 ${dinner[dinnerIndex].name}</span>
+  <span class="menu-item">🌙 ${dinner[dinnerIndex].name} + 
+  <span class="side-dish">${side[sideIndex].name}</span>
 `;
 
 
@@ -215,7 +233,8 @@ button.addEventListener("click", function() {
     // 昼＋晩の材料を1つの配列にまとめる
     const ingredients = [
       ...lunch[lunchIndex].ingredients,
-      ...dinner[dinnerIndex].ingredients
+      ...dinner[dinnerIndex].ingredients,
+      ...side[sideIndex].ingredients
     ];
 
     // 重複する材料を削除
