@@ -1,0 +1,62 @@
+#menuList,
+#shoppingList {
+  width: 80%;
+
+  margin: 20px auto;
+  padding: 15px 40px;
+
+  background-color: #eeeeee;
+
+  border-radius: 8px;
+}
+
+#menuList li,
+#shoppingList li {
+  margin: 5px 0;
+
+  font-size: 20px;
+}
+
+.shopping-title {
+  width: 55%;
+
+  margin: 40px auto 20px;
+  padding: 5px;
+
+  text-align: center;
+
+  background-color: #d5d5ad;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+}
+
+#sakusei-button {
+  background-color: #4CAF50;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 12px 30px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* マウスを乗せたとき */
+#sakusei-button:hover {
+  background-color: #388E3C;
+}
+
+.day-name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+  color: green;
+}
