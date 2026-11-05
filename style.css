@@ -60,3 +60,75 @@
   font-family: "Yu Gothic", "Meiryo", sans-serif;
   color: green;
 }
+
+.menu-item {
+  display: inline;
+}
+
+/* =========================
+   スマホ表示
+========================= */
+@media screen and (max-width: 600px) {
+
+  .menu-item {
+    display: block;
+    margin: 5px 0;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    margin: 0;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* 献立作成ボタン */
+  #sakusei-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  /* 献立 */
+  #menuList {
+    width: auto;
+    padding: 15px 20px;
+    margin: 15px 0;
+  }
+
+  #menuList li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  /* 曜日 */
+  .day-name {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  /* 購入材料 */
+  #shoppingList {
+    width: auto;
+    padding: 15px 20px;
+    margin: 15px 0;
+  }
+
+  #shoppingList li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+}

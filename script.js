@@ -200,11 +200,12 @@ button.addEventListener("click", function() {
 
     const day = document.getElementById(days[i]);
 
-    day.innerHTML =
-      `<span class="day-name">${dayName[i]}</span>：
-       🌅 ${morning[morningIndex]} /
-       ☀️ ${lunch[lunchIndex].name} /
-       🌙 ${dinner[dinnerIndex].name}`;
+    day.innerHTML = `
+  <span class="day-name">${dayName[i]}</span>
+  <span class="menu-item">🌅 ${morning[morningIndex]}</span>
+  <span class="menu-item">☀️ ${lunch[lunchIndex].name}</span>
+  <span class="menu-item">🌙 ${dinner[dinnerIndex].name}</span>
+`;
 
 
     // --------------------
